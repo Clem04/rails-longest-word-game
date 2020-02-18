@@ -1,2 +1,20 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<div class="container">
+  <% @letters.each do |letter| %>
+    <ul>
+      <li class="letter"><%= letter %></li>
+    </ul>
+  <% end %>
+
+</div>
+<!-- Form Title-->
+<div class="container">
+  <h3>What is the longest word you can find?</h3>
+</div>
+<!-- Form Inputs -->
+<div class="container">
+  <form action="/score" class="inputs">
+    <input type="text" name="letter" class="letter-input">
+    <input type="submit" value="Ask!" class="btn-play">
+  </form>
+</div>
+
